@@ -6,7 +6,9 @@
 /* global document, Office */
 
 Office.onReady((info) => {
+  console.log('office ready',info.host )
   if (info.host === Office.HostType.Outlook) {
+    console.log('prepare taskpane') 
     document.getElementById("sideload-msg").style.display = "none";
     document.getElementById("app-body").style.display = "flex";
     document.getElementById("run").onclick = run;
